@@ -22,17 +22,18 @@ app.use(cors({
 app.use(express.json())
 
 app.use(express.urlencoded({extended:true}))
+
 //connect to db
 db()
 
-app.get("/", (req, res)=>{
+app.get("/", (req, res) => {
     res.send("Hello World!")
-})
+});
 
 //user routes 
 app.use("/api/v1/users", userRoutes)
 
-app.listen(port, ()=>{
+app.listen(port, () => {
     console.log(`app listening on port ${port}`);
-})
+});
 
