@@ -1,8 +1,9 @@
 import express from 'express'
-import { userRegister } from '../controller/user.controller.js'
+import { userRegister, verifyUser } from '../controller/user.controller.js'
 
 const router = express.Router()
 
 router.post("/register", userRegister)
+router.get("/verify/:token", verifyUser)
 
 export default router
