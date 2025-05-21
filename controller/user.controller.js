@@ -104,11 +104,16 @@ export const verifyUser = async (req, res) =>{
 
     if(!user){
         return res.status(400).json({
-            message: "Invalid token"
+            message: "Invalid user"
         })
     }
 
     user.isVerified = true
     user.verificationToken = undefined
     await user.save()
+}
+
+
+export const userLogin = async (req, res) =>{
+
 }
