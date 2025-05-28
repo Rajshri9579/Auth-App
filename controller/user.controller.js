@@ -143,10 +143,7 @@ export const userLogin = async (req, res) => {
 
 
 
-        
         //verify user logic remained
-
-
 
 
         const token = jwt.sign({
